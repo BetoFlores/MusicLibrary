@@ -3,38 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
-
+    <title>Music Library</title>
+    <!-- CSS Libs -->
     <link rel="manifest" href="manifest.json">
-
-    <!-- un-comment this code to enable service worker
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('service worker installed'))
-          .catch(err => console.log('Error', err));
-      }
-    </script>-->
-
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="lib/ionic-ion-tinder-cards/ionic.tdcards.css" rel="stylesheet">
+    <!-- CSS Custom -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
-
-    <!-- ionic/angularjs js -->
+    <!-- JS Libs -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+    <script src="lib/collide/collide.js"></script>
+    <script src="lib/ionic-ion-tinder-cards/ionic.tdcards.js"></script>
+    <script src="lib/angular-audio/app/angular.audio.js"></script>
 
-    <!-- your app's js -->
+    <!-- JS Custom -->
     <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
+    <script src="js/app.constants.js"></script>
+    <script src="js/app.config.js"></script>
+    <script src="js/app.run.js"></script>
+    <script src="js/discover/discover.controller.js"></script>
+    <script src="js/discover/discover.service.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="MusicLibrary">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->

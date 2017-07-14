@@ -1,0 +1,18 @@
+<ion-view view-title="Discover">
+  <ion-content>
+      <td-cards>
+        <td-card ng-repeat="song in dc.recommendations"
+                 ng-show="$first"
+                 on-swipe-left="dc.discardRecommendation()"
+                 on-swipe-right="dc.addFavorite()">
+          <div class="item item-image">
+              <img ng-src="{{song.image_large}}" alt="{{song.title}}" />
+              <div class="item">
+                  <h1>{{song.title}}</h4>
+                  <p>{{song.artist}}</p>
+              </div>
+          </div>
+        </td-card>
+      </td-cards>
+  </ion-content>
+</ion-view>
